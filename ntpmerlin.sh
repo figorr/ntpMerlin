@@ -10,7 +10,7 @@
 ##             | |                                      ##
 ##             |_|                                      ##
 ##                                                      ##
-##       https://github.com/jackyaz/ntpMerlin           ##
+##       https://github.com/figorr/ntpMerlin            ##
 ##                                                      ##
 ##########################################################
 
@@ -22,12 +22,12 @@ readonly SCRIPT_NAME="ntpMerlin"
 readonly SCRIPT_NAME_LOWER=$(echo $SCRIPT_NAME | tr 'A-Z' 'a-z' | sed 's/d//')
 readonly SCRIPT_VERSION="v3.1.0"
 SCRIPT_BRANCH="master"
-SCRIPT_REPO="https://raw.githubusercontent.com/jackyaz/$SCRIPT_NAME/$SCRIPT_BRANCH"
+SCRIPT_REPO="https://raw.githubusercontent.com/figorr/$SCRIPT_NAME/$SCRIPT_BRANCH"
 readonly SCRIPT_DIR="/jffs/addons/$SCRIPT_NAME_LOWER.d"
 readonly SCRIPT_WEBPAGE_DIR="$(readlink /www/user)"
 readonly SCRIPT_WEB_DIR="$SCRIPT_WEBPAGE_DIR/$SCRIPT_NAME_LOWER"
 readonly SHARED_DIR="/jffs/addons/shared-jy"
-readonly SHARED_REPO="https://raw.githubusercontent.com/jackyaz/shared-jy/master"
+readonly SHARED_REPO="https://raw.githubusercontent.com/figorr/shared-jy/master"
 readonly SHARED_WEB_DIR="$SCRIPT_WEBPAGE_DIR/shared-jy"
 [ -z "$(nvram get odmpid)" ] && ROUTER_MODEL=$(nvram get productid) || ROUTER_MODEL=$(nvram get odmpid)
 [ -f /opt/bin/sqlite3 ] && SQLITE3_PATH=/opt/bin/sqlite3 || SQLITE3_PATH=/usr/sbin/sqlite3
@@ -1052,7 +1052,7 @@ ScriptHeader(){
 	printf "\\e[1m##                                                        ##\\e[0m\\n"
 	printf "\\e[1m##                   %s on %-9s                  ##\\e[0m\\n" "$SCRIPT_VERSION" "$ROUTER_MODEL"
 	printf "\\e[1m##                                                        ##\\e[0m\\n"
-	printf "\\e[1m##        https://github.com/jackyaz/ntpMerlin            ##\\e[0m\\n"
+	printf "\\e[1m##        https://github.com/figorr/ntpMerlin             ##\\e[0m\\n"
 	printf "\\e[1m##                                                        ##\\e[0m\\n"
 	printf "\\e[1m##             Time server in use: %-20s   ##\\e[0m\\n" "$TIMESERVER_NAME_MENU"
 	printf "\\e[1m##  Config location: %-36s ##\\e[0m\\n" "$CONFFILE_MENU"
@@ -1605,13 +1605,13 @@ case "$1" in
 	;;
 	develop)
 		SCRIPT_BRANCH="develop"
-		SCRIPT_REPO="https://raw.githubusercontent.com/jackyaz/$SCRIPT_NAME/$SCRIPT_BRANCH"
+		SCRIPT_REPO="https://raw.githubusercontent.com/figorr/$SCRIPT_NAME/$SCRIPT_BRANCH"
 		Update_Version force
 		exit 0
 	;;
 	stable)
 		SCRIPT_BRANCH="master"
-		SCRIPT_REPO="https://raw.githubusercontent.com/jackyaz/$SCRIPT_NAME/$SCRIPT_BRANCH"
+		SCRIPT_REPO="https://raw.githubusercontent.com/figorr/$SCRIPT_NAME/$SCRIPT_BRANCH"
 		Update_Version force
 		exit 0
 	;;
