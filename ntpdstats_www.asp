@@ -188,7 +188,7 @@ var $j=jQuery.noConflict(),maxNoCharts=6,currentNoCharts=0,ShowLines=GetCookie("
 <tr><td colspan="2">Opciones de Vista de los Gráficos (click para expandir/contraer)</td></tr>
 </thead>
 <tr>
-<th width="20%"><span style="color:#FFFFFF;">Formato de tiempo</span><br /><span style="color:#FFCC00;">((para informacion del eje de las últimas 24 horas))</span></th>
+<th width="20%"><span style="color:#FFFFFF;">Formato de tiempo</span><br /><span style="color:#FFCC00;">(para informacion del eje de las últimas 24 horas)</span></th>
 <td>
 <select style="width:100px" class="input_option" onchange="changeAllCharts(this)" id="Time_Format">
 <option value="0">24h</option>
