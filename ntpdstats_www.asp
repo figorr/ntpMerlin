@@ -150,7 +150,7 @@ var $j=jQuery.noConflict(),maxNoCharts=6,currentNoCharts=0,ShowLines=GetCookie("
 </td>
 </tr>
 <tr class="even" id="rowtimeoutput">
-<th width="40%">Modo Salida de Tiempo<br/><span style="color:#FFCC00;">(for CSV export)</span></th>
+<th width="40%">Modo Salida de Tiempo<br/><span style="color:#FFCC00;">(para exportar CSV)</span></th>
 <td class="settingvalue">
 <input type="radio" name="ntpmerlin_outputtimemode" id="ntpmerlin_timeoutput_non-unix" class="input" value="non-unix" checked>
 <label for="ntpmerlin_timeoutput_non-unix" class="settingvalue">No-Unix</label>
